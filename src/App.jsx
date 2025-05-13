@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import ProductDetailsPage from "./Project-1/ProductDetailsPage";
 import ShoppingCart from "./Project-1/ShoppingCart";
 import { SearchProvider } from "./SearchContext";
+import HomePage from "./Project-1/HomePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <SearchProvider>
       <Header />
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="products" element={<ProductList />} />
           <Route path="/products/:id" element={<ProductDetailsPage />} />
           <Route path="/shoppingcart" element={<ShoppingCart />} />
